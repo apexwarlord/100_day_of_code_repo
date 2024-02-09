@@ -1,0 +1,17 @@
+{%- extends "base.html" %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h1 class="heading">{{ movie.title }}</h1>
+  {% if error_msg %}
+  <h3 style="color: red">{{ error_msg }}</h3>
+  {% endif %}
+    <p class="description">Edit Movie Rating</p>
+
+      {{ wtf.quick_form(form, novalidate=True) }}
+
+
+  </div>
+{% endblock %}

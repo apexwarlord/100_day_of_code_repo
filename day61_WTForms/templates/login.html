@@ -1,0 +1,26 @@
+{%- extends "base.html" %}
+{% import "bootstrap/utils.html" as utils %}
+
+{% block content %}
+<div class="container">
+    <h1>Login</h1>
+    <!-- This is where our form will go. -->
+
+    {{ wtf.quick_form(form, novalidate=True) }}
+
+<!--    <form method="POST" action="{{ url_for('login') }}" novalidate>-->
+<!--        {{ form.hidden_tag() }}-->
+<!--        <p>{{ form.email.label }}</p>-->
+<!--        <p>{{ form.email() }}-->
+<!--            {% for err in form.email.errors %}-->
+<!--            <span style="color: red">{{ err }}</span>-->
+<!--            {% endfor %}</p>-->
+<!--        <p>{{ form.password.label }}</p>-->
+<!--        <p>{{ form.password() }}-->
+<!--            {% for err in form.password.errors %}-->
+<!--            <span style="color: red">{{ err }}</span>-->
+<!--            {% endfor %}</p>-->
+<!--        <p>{{ form.submit() }}</p>-->
+<!--    </form>-->
+</div>
+{%- endblock %}
